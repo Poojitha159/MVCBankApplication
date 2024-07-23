@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 
 	    if (password != null && username != null) {
 	      try {
-	        if ("admin".equals(username) && "admin123".equals(password)) {
+	    	  if (bankApplicationDbUtil.validateAdmin(username, password)) {
 	          HttpSession session = request.getSession();
 	          session.setAttribute("username", username);
 	          session.setAttribute("role", "Admin");
@@ -59,3 +59,4 @@ public class LoginServlet extends HttpServlet {
 
 	  }
 	}
+
