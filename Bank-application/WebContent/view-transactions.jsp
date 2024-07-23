@@ -1,8 +1,5 @@
 
 
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -18,6 +15,10 @@
 </head>
 <body class="bg-light">
     <div class="container-lg my-5">
+    <div class="container my-3">
+    <div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
     <h1 class="text-center my-5">Transaction Details</h1>
     <form action="admin" method="get">
       <div class="col-sm-10">
@@ -36,8 +37,15 @@
         <i class="fa-solid fa-filter"></i>
       </div>
       
+      <div class="d-flex my-3">
+				<input type="date" class="form-control" name="startDate"
+					placeholder="Start Date"> <input type="date"
+					class="form-control mx-2" name="endDate" placeholder="End Date">
+				<input type="submit" class="btn btn-primary" value="Filter">
+			</div>
+      
     </form>
-
+    
     <table class="table table-hover table-bordered border-primary">
       <thead>
         <tr>
