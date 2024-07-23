@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container my-5">
+    <div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
         <h2 class="text-center my-5">Add Customer</h2>
         <hr>
         <form action="admin" method="post">
