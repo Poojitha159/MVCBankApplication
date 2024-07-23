@@ -13,6 +13,9 @@
 </head>
 <body class="bg-light">
     <div class="container-lg my-5">
+    <div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
     <h1 class="text-center my-5">Customer Details</h1>
     <form action="admin" method="get">
       <div class="col-sm-10">
@@ -54,6 +57,7 @@
       </tbody>
     </table>
 <button onclick="window.location.href='admin?command=admin'" class="btn btn-secondary mt-3">Go Back</button>
+ 
   </div>
 </body>
 </html>
