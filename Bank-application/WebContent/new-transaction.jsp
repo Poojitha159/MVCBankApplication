@@ -9,7 +9,11 @@
 </head>
 <body>
     <div class="container my-5">
+    <div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
         <h2 class="text-center my-5">Perform Transaction</h2>
+        
         <hr>
         <p class="fs-3"  ><span class="load  fs-3">AccountNumber:</span> ${bankAccountNumber}</p>
         <form action="user" method="post">
@@ -26,10 +30,13 @@
             </div>
             <div class="col-sm-10 my-4">
                 <input type="submit" value="Transfer" class="btn btn-outline-primary btn-lg">
-                <a href="user" class="btn btn-outline-primary btn-lg">Cancel</a>
+                <a href="user" class="btn btn-outline-primary btn-lg">Go Back</a>
             </div>
         </form>
     </div>
-    <button onclick="window.location.href='user?command=user'" class="btn btn-secondary mt-3">Go Back</button>
+     
+    
+    
+    
 </body>
 </html>
