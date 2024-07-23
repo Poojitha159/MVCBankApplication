@@ -1,5 +1,7 @@
 package com.techlabs.model;
 
+import java.sql.Date;
+
 public class Transaction {
 	private int transaction_number;
 	private int sender_account_number;
@@ -36,6 +38,22 @@ public class Transaction {
 		
 		this.transaction_type = string;
 		this.transaction_amount = transactionAmount;
+	}
+
+	public Transaction() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Transaction(int senderAccountNumber, int receiverAccountNumber, String dateOfTransaction,
+			Double tarsanctionAmount) {
+		this.sender_account_number = senderAccountNumber;
+		this.receiver_account_number = receiverAccountNumber;
+		this.date_of_transaction = dateOfTransaction;
+		this.transaction_amount = tarsanctionAmount;
+	}
+
+	public Transaction(int id, int accountId, double amount, String type, String date) {
+		
 	}
 
 	public int getTransaction_number() {
