@@ -25,6 +25,30 @@ public class BankApplicationDbUtil {
 	  public BankApplicationDbUtil(DataSource dataSource) {
 	    this.dataSource=dataSource;
 	  }
+	public boolean validateAdmin(String username, String password) throws SQLException {
+			connection = dataSource.getConnection();
+		    String selectQuery="select * from admin where username=? and password=?";
+		    prepareStatement = connection.prepareStatement(selectQuery);
+		    prepareStatement.setString(1,username);
+		    prepareStatement.setString(2,password);
+		    
+		    ResultSet executeQuery = prepareStatement.executeQuery();
+		   /* while(executeQuery.next()) {
+		      String customerId=executeQuery.getString("username");
+		      String passwordDB=executeQuery.getString("password");
+		      if(customerId==username && passwordDB.equals(password)) {
+		        return true;
+		      }*/
+		    if(executeQuery.next()) {
+		    	return true;
+		      
+		    }
+		    else {
+		    	return false;
+		    }
+		
+	  }
+	  
 
 	  public boolean validateUser(String username, String password) throws SQLException {
 	      if (username == null || !username.matches("\\d+")) {
