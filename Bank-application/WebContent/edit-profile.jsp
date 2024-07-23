@@ -8,7 +8,12 @@
 </head>
 <body>
 <div class="container mt-5">
+<div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
     <h2>Edit Profile</h2>
+    
+      <hr>
     <form action="user" method="post">
         <input type="hidden" name="command" value="updateProfile">
         <div class="mb-3">
@@ -28,6 +33,7 @@
             <input type="password" class="form-control" id="password" name="password" value="${password}" required>
         </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
+        
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
