@@ -13,7 +13,12 @@
 </head>
 <body class="bg-light">
     <div class="container-lg my-5">
+    <div class="container my-3">
+        <div class="d-flex justify-content-end">
+            <button onclick="window.location.href='login.jsp'" class="btn btn-danger">Logout</button>
+        </div>
     <h1 class="text-center my-5">Passbook Details</h1>
+    
     <p class="fs-3"  ><span class="load  fs-3">AccountNumber:</span> ${bankAccountNumber}</p>
     <form action="user" method="get">
       <div class="col-sm-10">
@@ -31,6 +36,8 @@
         <input type="submit" class="btn btn-primary mx-2" value="Search">
         <i class="fa-solid fa-filter"></i>
       </div>
+      
+      
       
     </form>
 
@@ -68,5 +75,6 @@
       </div>
   </div>
  <button onclick="window.location.href='user?command=user'" class="btn btn-secondary mt-3">Go Back</button>
+
 </body>
 </html>
